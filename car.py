@@ -1,8 +1,21 @@
 
+from account import Account
+
+
 class Car : 
     id = int 
-    driver = str 
+    driver = Account("","") 
     passager = int 
     brand = str 
     model = str
+    license = str
+    
+    def __init__
+    
+    
+    
+    
+    
+    
+
 
