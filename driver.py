@@ -1,10 +1,10 @@
-import email
-from unicodedata import name
+from account import Account
 
-
-class Driver :
-    id = int
-    name = str
-    document = str
-    email = str
-    possword = int
+class Driver(Account):
+    idDriver      = int
+    license = str
+    
+    def __init__(self, idDriver, license, name, document, mail, password, gender, numberCell, age):
+        super().__init__(name, document, mail, password, gender, numberCell, age)
+        self.idDriver         = idDriver
+        self.license    = license

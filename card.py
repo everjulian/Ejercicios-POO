@@ -1,15 +1,15 @@
-from payment import Payment
+from bank import Bank
 
-class Card(Payment) :
-    number      = int
-    cvv         = int
-    date        = int
+class Card(Bank):
+    cardNumber        = int
+    cardSecurityCode  = int
+    cardDate          = int
+
+    def __init__(self, id, ammount, typePayment, date, bankName, identification, numberAccount, cardNumber, cardDate, cardSecurityCode):
+        super().__init__(id, ammount, typePayment, date, bankName, identification, numberAccount)
+        self.cardDate           =   cardDate
+        self.cardNumber         =   cardNumber
+        self.cardSecurityCode   =   cardSecurityCode
+            
     
-    def __init__(self, id, ammount, number, cvv, date):
-        super().__init__(id, ammount)
-        self.number     = number
-        self.cvv        = cvv
-        self.date       = date
-    
-   
     
